@@ -1,0 +1,39 @@
+services:
+  postgres:
+    env_file:
+      - .env
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRESPORT}:5432"
+    networks:
+      - test
+  create:
+    env_file: 
+      - .env
+    build: 
+      context: ./InsertarDB
+      dockerfile: Dockerfile
+    volumes:
+      - ./InsertarDB:/app 
+    networks:
+      - test
+  load:
+    env_file: 
+      - .env
+    build: 
+      context: ./cargarDB
+      dockerfile: Dockerfile
+    volumes:
+      - ./cargarDB:/app 
+    networks:
+      - test
+volumes:
+  postgres_data:
+
+
+
+networks:
+  test:
+    driver: bridge

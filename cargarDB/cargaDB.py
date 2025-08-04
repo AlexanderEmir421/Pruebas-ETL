@@ -100,3 +100,5 @@ if len(data.data) != 0:
             set_lastid(i,"Productid")
         else:
             set_lastid(i,"Salesid")
+else:
+    pass

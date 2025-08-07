@@ -1,0 +1,135 @@
+[2025-08-05T19:53:53.917+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Ejercicio1.LoadAndSetdimdate manual__2025-08-05T19:53:40.364322+00:00 [queued]>
+[2025-08-05T19:53:53.986+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Ejercicio1.LoadAndSetdimdate manual__2025-08-05T19:53:40.364322+00:00 [queued]>
+[2025-08-05T19:53:53.988+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-08-05T19:53:54.064+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): LoadAndSetdimdate> on 2025-08-05 19:53:40.364322+00:00
+[2025-08-05T19:53:54.092+0000] {standard_task_runner.py:60} INFO - Started process 1585 to run task
+[2025-08-05T19:53:54.109+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Ejercicio1', 'LoadAndSetdimdate', 'manual__2025-08-05T19:53:40.364322+00:00', '--job-id', '177', '--raw', '--subdir', 'DAGS_FOLDER/ejercicio1.py', '--cfg-path', '/tmp/tmpelrlp50v']
+[2025-08-05T19:53:54.130+0000] {standard_task_runner.py:88} INFO - Job 177: Subtask LoadAndSetdimdate
+[2025-08-05T19:53:54.439+0000] {task_command.py:423} INFO - Running <TaskInstance: Ejercicio1.LoadAndSetdimdate manual__2025-08-05T19:53:40.364322+00:00 [running]> on host 019b67754667
+[2025-08-05T19:53:54.835+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Ejercicio1' AIRFLOW_CTX_TASK_ID='LoadAndSetdimdate' AIRFLOW_CTX_EXECUTION_DATE='2025-08-05T19:53:40.364322+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-05T19:53:40.364322+00:00'
+[2025-08-05T19:53:54.940+0000] {logging_mixin.py:188} INFO -      dateid        date  year  quarter  ... monthname  day weekday  weekdayname
+0         1  2019-03-09  2019        1  ...     March    9       7       Sunday
+1         2  2019-03-10  2019        1  ...     March   10       1       Monday
+2         3  2019-03-11  2019        1  ...     March   11       2      Tuesday
+3         4  2019-03-12  2019        1  ...     March   12       3    Wednesday
+4         5  2019-03-13  2019        1  ...     March   13       4     Thursday
+..      ...         ...   ...      ...  ...       ...  ...     ...          ...
+345     346  2020-02-17  2020        1  ...  February   17       2      Tuesday
+346     347  2020-02-18  2020        1  ...  February   18       3    Wednesday
+347     348  2020-02-19  2020        1  ...  February   19       4     Thursday
+348     349  2020-02-20  2020        1  ...  February   20       5       Friday
+349     350  2020-02-21  2020        1  ...  February   21       6     Saturday
+
+[350 rows x 10 columns]
+[2025-08-05T19:53:54.942+0000] {logging_mixin.py:188} INFO - 
+ ---------------SE ENCONTRAROS DATOS PARA LA CARGA INICIAL | ULTIMO ID DE LA TABLA:350-----------------
+[2025-08-05T19:53:55.752+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:55.783+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:56.008+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:56.012+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:56.240+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:56.243+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:56.501+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:56.506+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:56.780+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:56.784+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:57.007+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:57.009+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:57.228+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:57.237+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:57.509+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:57.529+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:57.805+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:57.809+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:58.044+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:58.048+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:58.279+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:58.284+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:58.507+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:58.512+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:58.752+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:58.756+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:58.999+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:59.002+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:59.252+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:59.260+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:59.533+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:59.583+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:53:59.859+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:53:59.873+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:00.129+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:00.134+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:00.371+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:00.375+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:00.603+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:00.607+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:00.847+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:00.852+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:01.087+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:01.090+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:01.329+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:01.331+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:01.568+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:01.573+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:01.815+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:01.818+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:02.086+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:02.090+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:02.329+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:02.337+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:02.583+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:02.588+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:02.842+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:02.871+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:03.171+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:03.176+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:03.426+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:03.433+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:03.669+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:03.674+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:03.946+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:03.949+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:04.193+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:04.197+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:04.454+0000] {_client.py:1038} INFO - HTTP Request: POST https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimdate?columns=%22dateid%22%2C%22year%22%2C%22quarter%22%2C%22monthname%22%2C%22date%22%2C%22weekday%22%2C%22day%22%2C%22weekdayname%22%2C%22month%22%2C%22quartername%22 "HTTP/2 201 Created"
+[2025-08-05T19:54:04.458+0000] {logging_mixin.py:188} INFO - ---------------------------------------Datos insertados Correctamente dimdate------------------------
+ 
+[2025-08-05T19:54:05.064+0000] {_client.py:1038} INFO - HTTP Request: PATCH https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/StgLogs?table_name=eq.dimdate "HTTP/2 200 OK"
+[2025-08-05T19:54:05.068+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-05T19:54:05.111+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Ejercicio1, task_id=LoadAndSetdimdate, execution_date=20250805T195340, start_date=20250805T195353, end_date=20250805T195405
+[2025-08-05T19:54:05.232+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-05T19:54:05.278+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

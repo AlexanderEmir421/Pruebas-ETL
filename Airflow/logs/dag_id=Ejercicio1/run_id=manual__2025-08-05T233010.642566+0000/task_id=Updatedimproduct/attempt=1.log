@@ -1,0 +1,16 @@
+[2025-08-05T23:30:26.825+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Ejercicio1.Updatedimproduct manual__2025-08-05T23:30:10.642566+00:00 [queued]>
+[2025-08-05T23:30:26.881+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Ejercicio1.Updatedimproduct manual__2025-08-05T23:30:10.642566+00:00 [queued]>
+[2025-08-05T23:30:26.884+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-08-05T23:30:26.959+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Updatedimproduct> on 2025-08-05 23:30:10.642566+00:00
+[2025-08-05T23:30:26.982+0000] {standard_task_runner.py:60} INFO - Started process 3405 to run task
+[2025-08-05T23:30:27.004+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Ejercicio1', 'Updatedimproduct', 'manual__2025-08-05T23:30:10.642566+00:00', '--job-id', '240', '--raw', '--subdir', 'DAGS_FOLDER/ejercicio1.py', '--cfg-path', '/tmp/tmplrbp6c4k']
+[2025-08-05T23:30:27.016+0000] {standard_task_runner.py:88} INFO - Job 240: Subtask Updatedimproduct
+[2025-08-05T23:30:27.258+0000] {task_command.py:423} INFO - Running <TaskInstance: Ejercicio1.Updatedimproduct manual__2025-08-05T23:30:10.642566+00:00 [running]> on host 019b67754667
+[2025-08-05T23:30:27.597+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Ejercicio1' AIRFLOW_CTX_TASK_ID='Updatedimproduct' AIRFLOW_CTX_EXECUTION_DATE='2025-08-05T23:30:10.642566+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-05T23:30:10.642566+00:00'
+[2025-08-05T23:30:28.354+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/StgLogs?select=last_id&table_name=eq.dimproduct "HTTP/2 200 OK"
+[2025-08-05T23:30:28.430+0000] {logging_mixin.py:188} INFO - 
+ ---------------NO HAY DATOS NUEVOS PARA INSERTAR EN SUPABASE-----------------
+[2025-08-05T23:30:28.432+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-05T23:30:28.475+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Ejercicio1, task_id=Updatedimproduct, execution_date=20250805T233010, start_date=20250805T233026, end_date=20250805T233028
+[2025-08-05T23:30:28.636+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-05T23:30:28.792+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

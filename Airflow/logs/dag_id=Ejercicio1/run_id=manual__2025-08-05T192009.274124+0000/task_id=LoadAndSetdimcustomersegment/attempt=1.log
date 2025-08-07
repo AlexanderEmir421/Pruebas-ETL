@@ -1,0 +1,64 @@
+[2025-08-05T19:20:26.358+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Ejercicio1.LoadAndSetdimcustomersegment manual__2025-08-05T19:20:09.274124+00:00 [queued]>
+[2025-08-05T19:20:26.398+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Ejercicio1.LoadAndSetdimcustomersegment manual__2025-08-05T19:20:09.274124+00:00 [queued]>
+[2025-08-05T19:20:26.399+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-08-05T19:20:26.470+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): LoadAndSetdimcustomersegment> on 2025-08-05 19:20:09.274124+00:00
+[2025-08-05T19:20:26.500+0000] {standard_task_runner.py:60} INFO - Started process 976 to run task
+[2025-08-05T19:20:26.520+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Ejercicio1', 'LoadAndSetdimcustomersegment', 'manual__2025-08-05T19:20:09.274124+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/ejercicio1.py', '--cfg-path', '/tmp/tmp606cdyqb']
+[2025-08-05T19:20:26.547+0000] {standard_task_runner.py:88} INFO - Job 131: Subtask LoadAndSetdimcustomersegment
+[2025-08-05T19:20:27.335+0000] {task_command.py:423} INFO - Running <TaskInstance: Ejercicio1.LoadAndSetdimcustomersegment manual__2025-08-05T19:20:09.274124+00:00 [running]> on host 019b67754667
+[2025-08-05T19:20:28.867+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Ejercicio1' AIRFLOW_CTX_TASK_ID='LoadAndSetdimcustomersegment' AIRFLOW_CTX_EXECUTION_DATE='2025-08-05T19:20:09.274124+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-05T19:20:09.274124+00:00'
+[2025-08-05T19:20:29.873+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/dimcustomersegment?select=%2A "HTTP/2 200 OK"
+[2025-08-05T19:20:29.911+0000] {logging_mixin.py:188} INFO - 
+ --------------DB
+     Segmentid            City
+0          19       Sao Paulo
+1          21       Sao Paulo
+2          31  Rio de Janeiro
+3          32  Rio de Janeiro
+4          40        Brasilia
+5          43        Brasilia
+6          44  Rio de Janeiro
+7          46        Brasilia
+8          47        Salvador
+9          48        Salvador
+10         57  Rio de Janeiro
+11         71        Brasilia
+12         77        Brasilia
+13         81        Salvador
+14         82        Salvador
+15         83       Sao Paulo
+16         84  Rio de Janeiro
+17         86  Rio de Janeiro
+18         97        Brasilia 
+ --------------
+[2025-08-05T19:20:29.913+0000] {logging_mixin.py:188} INFO - 
+ --------------SUPABASE
+ data=[] count=None 
+ --------------
+[2025-08-05T19:20:29.929+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ejercicio1.py", line 114, in call
+    get_inactive(table,id,engine)
+  File "/opt/airflow/dags/ejercicio1.py", line 42, in get_inactive
+    comparison = df.merge(df_customers,on=[id],how='outer',indicator=True,suffixes=('_PG', '_SP'))
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 9843, in merge
+    return merge(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/reshape/merge.py", line 148, in merge
+    op = _MergeOperation(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/reshape/merge.py", line 737, in __init__
+    ) = self._get_merge_keys()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/reshape/merge.py", line 1203, in _get_merge_keys
+    right_keys.append(right._get_label_or_level_values(rk))
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 1778, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'Productid'
+[2025-08-05T19:20:30.046+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=Ejercicio1, task_id=LoadAndSetdimcustomersegment, execution_date=20250805T192009, start_date=20250805T192026, end_date=20250805T192030
+[2025-08-05T19:20:30.104+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 131 for task LoadAndSetdimcustomersegment ('Productid'; 976)
+[2025-08-05T19:20:30.181+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-08-05T19:20:30.268+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

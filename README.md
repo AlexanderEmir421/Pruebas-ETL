@@ -91,7 +91,7 @@ Esto pondrá en marcha:
 
 | Ejercicio | Descripción | Documentación |
 |----------|-------------|----------------|
-| Ejercicio 1 | Replicación de base PostgreSQL a Supabase | [Ver README](./ejercicio_1_replicacion/README.md) |
+| Ejercicio 1 | Replicación de base PostgreSQL a Supabase | [Ver README](./ejercicio_1_replicacion/.md) |
 | Ejercicio 2 | Ingesta incremental de cotizaciones desde API BCRA | [Ver README](./ejercicio_2_api_bcra/README.md) |
 | Ejercicio 3 | Scraping de propiedades en Posadas (Misiones) | [Ver README](./ejercicio_3_scraping/README.md) |
 

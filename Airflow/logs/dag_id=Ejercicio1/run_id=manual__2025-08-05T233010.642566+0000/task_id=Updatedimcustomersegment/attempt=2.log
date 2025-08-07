@@ -1,0 +1,46 @@
+[2025-08-05T23:35:31.377+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Ejercicio1.Updatedimcustomersegment manual__2025-08-05T23:30:10.642566+00:00 [queued]>
+[2025-08-05T23:35:31.396+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Ejercicio1.Updatedimcustomersegment manual__2025-08-05T23:30:10.642566+00:00 [queued]>
+[2025-08-05T23:35:31.397+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-08-05T23:35:31.428+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): Updatedimcustomersegment> on 2025-08-05 23:30:10.642566+00:00
+[2025-08-05T23:35:31.443+0000] {standard_task_runner.py:60} INFO - Started process 3501 to run task
+[2025-08-05T23:35:31.449+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Ejercicio1', 'Updatedimcustomersegment', 'manual__2025-08-05T23:30:10.642566+00:00', '--job-id', '247', '--raw', '--subdir', 'DAGS_FOLDER/ejercicio1.py', '--cfg-path', '/tmp/tmpzgm4qujl']
+[2025-08-05T23:35:31.461+0000] {standard_task_runner.py:88} INFO - Job 247: Subtask Updatedimcustomersegment
+[2025-08-05T23:35:31.564+0000] {task_command.py:423} INFO - Running <TaskInstance: Ejercicio1.Updatedimcustomersegment manual__2025-08-05T23:30:10.642566+00:00 [running]> on host 019b67754667
+[2025-08-05T23:35:31.748+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Ejercicio1' AIRFLOW_CTX_TASK_ID='Updatedimcustomersegment' AIRFLOW_CTX_EXECUTION_DATE='2025-08-05T23:30:10.642566+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-05T23:30:10.642566+00:00'
+[2025-08-05T23:35:32.719+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/stg_dimcustomersegment?select=%2A "HTTP/2 200 OK"
+[2025-08-05T23:35:32.822+0000] {logging_mixin.py:188} INFO - 
+ ---------------FULL OTHER JOIN-------------
+     segmentid         city_PG         city_SP   state _merge
+0          19       Sao Paulo       Sao Paulo  active   both
+1          21       Sao Paulo       Sao Paulo  active   both
+2          31  Rio de Janeiro  Rio de Janeiro  active   both
+3          32  Rio de Janeiro  Rio de Janeiro  active   both
+4          40        Brasilia        Brasilia  active   both
+5          43        Brasilia        Brasilia  active   both
+6          44  Rio de Janeiro  Rio de Janeiro  active   both
+7          46        Brasilia        Brasilia  active   both
+8          47        Salvador        Salvador  active   both
+9          48        Salvador        Salvador  active   both
+10         57  Rio de Janeiro  Rio de Janeiro  active   both
+11         71        Brasilia        Brasilia  active   both
+12         77        Brasilia        Brasilia  active   both
+13         81        Salvador        Salvador  active   both
+14         82        Salvador        Salvador  active   both
+15         83       Sao Paulo       Sao Paulo  active   both
+16         84  Rio de Janeiro  Rio de Janeiro  active   both
+17         86  Rio de Janeiro  Rio de Janeiro  active   both
+18         97        Brasilia        Brasilia  active   both
+[2025-08-05T23:35:32.839+0000] {logging_mixin.py:188} INFO - 
+ ---------------Nuevos Datos-------------
+ Empty DataFrame
+Columns: [segmentid, city, state]
+Index: []
+[2025-08-05T23:35:32.851+0000] {logging_mixin.py:188} INFO - 
+ ---------------Datos borrados-------------
+ Empty DataFrame
+Columns: [segmentid, city, state]
+Index: []
+[2025-08-05T23:35:33.103+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-05T23:35:33.146+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Ejercicio1, task_id=Updatedimcustomersegment, execution_date=20250805T233010, start_date=20250805T233531, end_date=20250805T233533
+[2025-08-05T23:35:33.322+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-05T23:35:33.417+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

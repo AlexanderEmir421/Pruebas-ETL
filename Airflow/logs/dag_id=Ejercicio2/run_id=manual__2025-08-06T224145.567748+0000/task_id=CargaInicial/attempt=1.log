@@ -1,0 +1,150 @@
+[2025-08-06T22:42:17.915+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Ejercicio2.CargaInicial manual__2025-08-06T22:41:45.567748+00:00 [queued]>
+[2025-08-06T22:42:17.942+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Ejercicio2.CargaInicial manual__2025-08-06T22:41:45.567748+00:00 [queued]>
+[2025-08-06T22:42:17.944+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-08-06T22:42:17.984+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): CargaInicial> on 2025-08-06 22:41:45.567748+00:00
+[2025-08-06T22:42:18.014+0000] {standard_task_runner.py:60} INFO - Started process 4097 to run task
+[2025-08-06T22:42:18.029+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Ejercicio2', 'CargaInicial', 'manual__2025-08-06T22:41:45.567748+00:00', '--job-id', '265', '--raw', '--subdir', 'DAGS_FOLDER/ejercicio2.py', '--cfg-path', '/tmp/tmpnfjyb_ei']
+[2025-08-06T22:42:18.032+0000] {standard_task_runner.py:88} INFO - Job 265: Subtask CargaInicial
+[2025-08-06T22:42:18.223+0000] {task_command.py:423} INFO - Running <TaskInstance: Ejercicio2.CargaInicial manual__2025-08-06T22:41:45.567748+00:00 [running]> on host 019b67754667
+[2025-08-06T22:42:18.510+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Ejercicio2' AIRFLOW_CTX_TASK_ID='CargaInicial' AIRFLOW_CTX_EXECUTION_DATE='2025-08-06T22:41:45.567748+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-06T22:41:45.567748+00:00'
+[2025-08-06T22:42:18.777+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.bcra.gob.ar'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2025-08-06T22:42:18.836+0000] {logging_mixin.py:188} INFO - ----Divisas---
+[2025-08-06T22:42:18.840+0000] {logging_mixin.py:188} INFO - [{'codigo': 'ARS', 'denominacion': 'PESO'}, {'codigo': 'ATS', 'denominacion': 'CHELINES AUSTRIACOS'}, {'codigo': 'AUD', 'denominacion': 'DOLAR AUSTRALIA'}, {'codigo': 'AWG', 'denominacion': 'FLORIN (ANTILLAS HOLANDESAS)'}, {'codigo': 'BOB', 'denominacion': 'BOLIVIANOS'}, {'codigo': 'BRL', 'denominacion': 'REAL'}, {'codigo': 'CAD', 'denominacion': 'DOLAR CANADIEN.'}, {'codigo': 'CHF', 'denominacion': 'FRANCO SUIZO'}, {'codigo': 'CLP', 'denominacion': 'PESO CHILENO'}, {'codigo': 'CNH', 'denominacion': 'YUAN CNH RENMINBI OFF SHORE'}, {'codigo': 'CNY', 'denominacion': 'YUAN CNY RENMINBI'}, {'codigo': 'COP', 'denominacion': 'COLOMBIANOS'}, {'codigo': 'CZK', 'denominacion': 'CORONAS CHECAS'}, {'codigo': 'DEM', 'denominacion': 'MARCO ALEMAN'}, {'codigo': 'DKK', 'denominacion': 'CORONAS DANESAS'}, {'codigo': 'ESP', 'denominacion': 'PESETA'}, {'codigo': 'EUR', 'denominacion': 'EURO'}, {'codigo': 'GBP', 'denominacion': 'LIBRA ESTERLINA'}, {'codigo': 'HKD', 'denominacion': 'DOLAR HONG KONG'}, {'codigo': 'ILS', 'denominacion': 'LIBRA ISRAELI'}, {'codigo': 'INR', 'denominacion': 'RUPIA (INDIA)'}, {'codigo': 'ITL', 'denominacion': 'LIRA ITALIANA'}, {'codigo': 'JPY', 'denominacion': 'YENS'}, {'codigo': 'MXP', 'denominacion': 'PESO MEXICANO'}, {'codigo': 'NIO', 'denominacion': 'CORDOBA NICARAGUENSE'}, {'codigo': 'NIO', 'denominacion': 'CORDOBAS'}, {'codigo': 'NOK', 'denominacion': 'CORONAS NORUEGA'}, {'codigo': 'NZD', 'denominacion': 'DOLAR NEOZELANDES'}, {'codigo': 'PEN', 'denominacion': 'SOLES'}, {'codigo': 'PYG', 'denominacion': 'GUARANIES'}, {'codigo': 'REF', 'denominacion': 'DOLAR REFERENCIA COM 3500'}, {'codigo': 'RSD', 'denominacion': 'DINAR SERBIA'}, {'codigo': 'RUB', 'denominacion': 'RUSIA'}, {'codigo': 'SEK', 'denominacion': 'CORONAS SUECAS'}, {'codigo': 'SGD', 'denominacion': 'DOLAR DE SINGAPUR'}, {'codigo': 'TRY', 'denominacion': 'LIRA TURCA'}, {'codigo': 'USD', 'denominacion': 'DOLAR E.E.U.U.'}, {'codigo': 'UYU', 'denominacion': 'PESO URUGUAYO'}, {'codigo': 'VEB', 'denominacion': 'BOLIVARES'}, {'codigo': 'VND', 'denominacion': 'DONG VIETNAM (c/1.000 unidades)'}, {'codigo': 'XAG', 'denominacion': 'PLATA - ONZA TROY'}, {'codigo': 'XAU', 'denominacion': 'ORO FINO (1 ONZA)'}, {'codigo': 'XDR', 'denominacion': 'DEG'}, {'codigo': 'ZAR', 'denominacion': 'RAND SUD'}]
+[2025-08-06T22:42:18.853+0000] {logging_mixin.py:188} INFO - 0,codigo           ARS
+denominacion    PESO
+Name: 0, dtype: object
+[2025-08-06T22:42:18.857+0000] {logging_mixin.py:188} INFO - 1,codigo                          ATS
+denominacion    CHELINES AUSTRIACOS
+Name: 1, dtype: object
+[2025-08-06T22:42:18.860+0000] {logging_mixin.py:188} INFO - 2,codigo                      AUD
+denominacion    DOLAR AUSTRALIA
+Name: 2, dtype: object
+[2025-08-06T22:42:18.863+0000] {logging_mixin.py:188} INFO - 3,codigo                                   AWG
+denominacion    FLORIN (ANTILLAS HOLANDESAS)
+Name: 3, dtype: object
+[2025-08-06T22:42:18.866+0000] {logging_mixin.py:188} INFO - 4,codigo                 BOB
+denominacion    BOLIVIANOS
+Name: 4, dtype: object
+[2025-08-06T22:42:18.869+0000] {logging_mixin.py:188} INFO - 5,codigo           BRL
+denominacion    REAL
+Name: 5, dtype: object
+[2025-08-06T22:42:18.873+0000] {logging_mixin.py:188} INFO - 6,codigo                      CAD
+denominacion    DOLAR CANADIEN.
+Name: 6, dtype: object
+[2025-08-06T22:42:18.876+0000] {logging_mixin.py:188} INFO - 7,codigo                   CHF
+denominacion    FRANCO SUIZO
+Name: 7, dtype: object
+[2025-08-06T22:42:18.878+0000] {logging_mixin.py:188} INFO - 8,codigo                   CLP
+denominacion    PESO CHILENO
+Name: 8, dtype: object
+[2025-08-06T22:42:18.883+0000] {logging_mixin.py:188} INFO - 9,codigo                                  CNH
+denominacion    YUAN CNH RENMINBI OFF SHORE
+Name: 9, dtype: object
+[2025-08-06T22:42:18.886+0000] {logging_mixin.py:188} INFO - 10,codigo                        CNY
+denominacion    YUAN CNY RENMINBI
+Name: 10, dtype: object
+[2025-08-06T22:42:18.890+0000] {logging_mixin.py:188} INFO - 11,codigo                  COP
+denominacion    COLOMBIANOS
+Name: 11, dtype: object
+[2025-08-06T22:42:18.894+0000] {logging_mixin.py:188} INFO - 12,codigo                     CZK
+denominacion    CORONAS CHECAS
+Name: 12, dtype: object
+[2025-08-06T22:42:18.896+0000] {logging_mixin.py:188} INFO - 13,codigo                   DEM
+denominacion    MARCO ALEMAN
+Name: 13, dtype: object
+[2025-08-06T22:42:18.898+0000] {logging_mixin.py:188} INFO - 14,codigo                      DKK
+denominacion    CORONAS DANESAS
+Name: 14, dtype: object
+[2025-08-06T22:42:18.900+0000] {logging_mixin.py:188} INFO - 15,codigo             ESP
+denominacion    PESETA
+Name: 15, dtype: object
+[2025-08-06T22:42:18.903+0000] {logging_mixin.py:188} INFO - 16,codigo           EUR
+denominacion    EURO
+Name: 16, dtype: object
+[2025-08-06T22:42:18.910+0000] {logging_mixin.py:188} INFO - 17,codigo                      GBP
+denominacion    LIBRA ESTERLINA
+Name: 17, dtype: object
+[2025-08-06T22:42:18.914+0000] {logging_mixin.py:188} INFO - 18,codigo                      HKD
+denominacion    DOLAR HONG KONG
+Name: 18, dtype: object
+[2025-08-06T22:42:18.917+0000] {logging_mixin.py:188} INFO - 19,codigo                    ILS
+denominacion    LIBRA ISRAELI
+Name: 19, dtype: object
+[2025-08-06T22:42:18.919+0000] {logging_mixin.py:188} INFO - 20,codigo                    INR
+denominacion    RUPIA (INDIA)
+Name: 20, dtype: object
+[2025-08-06T22:42:18.921+0000] {logging_mixin.py:188} INFO - 21,codigo                    ITL
+denominacion    LIRA ITALIANA
+Name: 21, dtype: object
+[2025-08-06T22:42:18.927+0000] {logging_mixin.py:188} INFO - 22,codigo           JPY
+denominacion    YENS
+Name: 22, dtype: object
+[2025-08-06T22:42:18.931+0000] {logging_mixin.py:188} INFO - 23,codigo                    MXP
+denominacion    PESO MEXICANO
+Name: 23, dtype: object
+[2025-08-06T22:42:18.934+0000] {logging_mixin.py:188} INFO - 24,codigo                           NIO
+denominacion    CORDOBA NICARAGUENSE
+Name: 24, dtype: object
+[2025-08-06T22:42:18.936+0000] {logging_mixin.py:188} INFO - 25,codigo               NIO
+denominacion    CORDOBAS
+Name: 25, dtype: object
+[2025-08-06T22:42:18.939+0000] {logging_mixin.py:188} INFO - 26,codigo                      NOK
+denominacion    CORONAS NORUEGA
+Name: 26, dtype: object
+[2025-08-06T22:42:18.943+0000] {logging_mixin.py:188} INFO - 27,codigo                        NZD
+denominacion    DOLAR NEOZELANDES
+Name: 27, dtype: object
+[2025-08-06T22:42:18.946+0000] {logging_mixin.py:188} INFO - 28,codigo            PEN
+denominacion    SOLES
+Name: 28, dtype: object
+[2025-08-06T22:42:18.947+0000] {logging_mixin.py:188} INFO - 29,codigo                PYG
+denominacion    GUARANIES
+Name: 29, dtype: object
+[2025-08-06T22:42:18.949+0000] {logging_mixin.py:188} INFO - 30,codigo                                REF
+denominacion    DOLAR REFERENCIA COM 3500
+Name: 30, dtype: object
+[2025-08-06T22:42:18.951+0000] {logging_mixin.py:188} INFO - 31,codigo                   RSD
+denominacion    DINAR SERBIA
+Name: 31, dtype: object
+[2025-08-06T22:42:18.955+0000] {logging_mixin.py:188} INFO - 32,codigo            RUB
+denominacion    RUSIA
+Name: 32, dtype: object
+[2025-08-06T22:42:18.958+0000] {logging_mixin.py:188} INFO - 33,codigo                     SEK
+denominacion    CORONAS SUECAS
+Name: 33, dtype: object
+[2025-08-06T22:42:18.961+0000] {logging_mixin.py:188} INFO - 34,codigo                        SGD
+denominacion    DOLAR DE SINGAPUR
+Name: 34, dtype: object
+[2025-08-06T22:42:18.963+0000] {logging_mixin.py:188} INFO - 35,codigo                 TRY
+denominacion    LIRA TURCA
+Name: 35, dtype: object
+[2025-08-06T22:42:18.967+0000] {logging_mixin.py:188} INFO - 36,codigo                     USD
+denominacion    DOLAR E.E.U.U.
+Name: 36, dtype: object
+[2025-08-06T22:42:18.970+0000] {logging_mixin.py:188} INFO - 37,codigo                    UYU
+denominacion    PESO URUGUAYO
+Name: 37, dtype: object
+[2025-08-06T22:42:18.976+0000] {logging_mixin.py:188} INFO - 38,codigo                VEB
+denominacion    BOLIVARES
+Name: 38, dtype: object
+[2025-08-06T22:42:18.978+0000] {logging_mixin.py:188} INFO - 39,codigo                                      VND
+denominacion    DONG VIETNAM (c/1.000 unidades)
+Name: 39, dtype: object
+[2025-08-06T22:42:18.982+0000] {logging_mixin.py:188} INFO - 40,codigo                        XAG
+denominacion    PLATA - ONZA TROY
+Name: 40, dtype: object
+[2025-08-06T22:42:18.987+0000] {logging_mixin.py:188} INFO - 41,codigo                        XAU
+denominacion    ORO FINO (1 ONZA)
+Name: 41, dtype: object
+[2025-08-06T22:42:18.991+0000] {logging_mixin.py:188} INFO - 42,codigo          XDR
+denominacion    DEG
+Name: 42, dtype: object
+[2025-08-06T22:42:18.994+0000] {logging_mixin.py:188} INFO - 43,codigo               ZAR
+denominacion    RAND SUD
+Name: 43, dtype: object
+[2025-08-06T22:42:18.995+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-06T22:42:19.027+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Ejercicio2, task_id=CargaInicial, execution_date=20250806T224145, start_date=20250806T224217, end_date=20250806T224219
+[2025-08-06T22:42:19.089+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-06T22:42:19.151+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,22 @@
+[2025-08-05T23:18:04.347+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Ejercicio1.Inicio manual__2025-08-05T23:18:00.150544+00:00 [queued]>
+[2025-08-05T23:18:04.379+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Ejercicio1.Inicio manual__2025-08-05T23:18:00.150544+00:00 [queued]>
+[2025-08-05T23:18:04.380+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-08-05T23:18:04.426+0000] {taskinstance.py:2191} INFO - Executing <Task(BranchPythonOperator): Inicio> on 2025-08-05 23:18:00.150544+00:00
+[2025-08-05T23:18:04.447+0000] {standard_task_runner.py:60} INFO - Started process 3125 to run task
+[2025-08-05T23:18:04.456+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Ejercicio1', 'Inicio', 'manual__2025-08-05T23:18:00.150544+00:00', '--job-id', '208', '--raw', '--subdir', 'DAGS_FOLDER/ejercicio1.py', '--cfg-path', '/tmp/tmp5tvhu307']
+[2025-08-05T23:18:04.464+0000] {standard_task_runner.py:88} INFO - Job 208: Subtask Inicio
+[2025-08-05T23:18:04.625+0000] {task_command.py:423} INFO - Running <TaskInstance: Ejercicio1.Inicio manual__2025-08-05T23:18:00.150544+00:00 [running]> on host 019b67754667
+[2025-08-05T23:18:04.858+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Ejercicio1' AIRFLOW_CTX_TASK_ID='Inicio' AIRFLOW_CTX_EXECUTION_DATE='2025-08-05T23:18:00.150544+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-05T23:18:00.150544+00:00'
+[2025-08-05T23:18:04.875+0000] {logging_mixin.py:188} INFO - -------------------------TABLES------------------
+[2025-08-05T23:18:04.876+0000] {logging_mixin.py:188} INFO - --dimcustomersegment---
+[2025-08-05T23:18:04.877+0000] {logging_mixin.py:188} INFO - --dimdate---
+[2025-08-05T23:18:04.878+0000] {logging_mixin.py:188} INFO - --dimproduct---
+[2025-08-05T23:18:04.879+0000] {logging_mixin.py:188} INFO - --factsales---
+[2025-08-05T23:18:04.880+0000] {logging_mixin.py:188} INFO - TABLAS PRECARGADAS
+[2025-08-05T23:18:04.881+0000] {python.py:201} INFO - Done. Returned value was: CargaIncremental
+[2025-08-05T23:18:04.882+0000] {branch.py:35} INFO - Branch into CargaIncremental
+[2025-08-05T23:18:04.883+0000] {skipmixin.py:178} INFO - Following branch CargaIncremental
+[2025-08-05T23:18:04.921+0000] {skipmixin.py:244} INFO - Skipping tasks [('CargaInicial', -1)]
+[2025-08-05T23:18:05.060+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Ejercicio1, task_id=Inicio, execution_date=20250805T231800, start_date=20250805T231804, end_date=20250805T231805
+[2025-08-05T23:18:05.139+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-05T23:18:05.243+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2025-08-07T01:56:46.140+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Ejercicio2.cargaincremental manual__2025-08-07T01:51:34.249172+00:00 [queued]>
+[2025-08-07T01:56:46.174+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Ejercicio2.cargaincremental manual__2025-08-07T01:51:34.249172+00:00 [queued]>
+[2025-08-07T01:56:46.176+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-08-07T01:56:46.220+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): cargaincremental> on 2025-08-07 01:51:34.249172+00:00
+[2025-08-07T01:56:46.242+0000] {standard_task_runner.py:60} INFO - Started process 6216 to run task
+[2025-08-07T01:56:46.254+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'Ejercicio2', 'cargaincremental', 'manual__2025-08-07T01:51:34.249172+00:00', '--job-id', '325', '--raw', '--subdir', 'DAGS_FOLDER/ejercicio2.py', '--cfg-path', '/tmp/tmpospesfd7']
+[2025-08-07T01:56:46.266+0000] {standard_task_runner.py:88} INFO - Job 325: Subtask cargaincremental
+[2025-08-07T01:56:46.479+0000] {task_command.py:423} INFO - Running <TaskInstance: Ejercicio2.cargaincremental manual__2025-08-07T01:51:34.249172+00:00 [running]> on host 019b67754667
+[2025-08-07T01:56:46.776+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Ejercicio2' AIRFLOW_CTX_TASK_ID='cargaincremental' AIRFLOW_CTX_EXECUTION_DATE='2025-08-07T01:51:34.249172+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-07T01:51:34.249172+00:00'
+[2025-08-07T01:56:47.498+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/urllib3/connectionpool.py:1061: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.bcra.gob.ar'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+
+[2025-08-07T01:56:48.363+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/cotizaciones?select=fecha&moneda=eq.ARS&order=fecha.desc&limit=1 "HTTP/2 200 OK"
+[2025-08-07T01:56:48.383+0000] {logging_mixin.py:188} INFO - FECHA DESDE: data=[] count=None MONEDA ARS
+[2025-08-07T01:56:48.601+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/cotizaciones?select=fecha&moneda=eq.ATS&order=fecha.desc&limit=1 "HTTP/2 200 OK"
+[2025-08-07T01:56:48.605+0000] {logging_mixin.py:188} INFO - FECHA DESDE: data=[] count=None MONEDA ATS
+[2025-08-07T01:56:51.238+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/cotizaciones?select=fecha&moneda=eq.AUD&order=fecha.desc&limit=1 "HTTP/2 200 OK"
+[2025-08-07T01:56:51.243+0000] {logging_mixin.py:188} INFO - FECHA DESDE: data=[{'fecha': '2025-08-06'}] count=None MONEDA AUD
+[2025-08-07T01:56:51.757+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/cotizaciones?select=fecha&moneda=eq.AWG&order=fecha.desc&limit=1 "HTTP/2 200 OK"
+[2025-08-07T01:56:51.762+0000] {logging_mixin.py:188} INFO - FECHA DESDE: data=[{'fecha': '2025-08-06'}] count=None MONEDA AWG
+[2025-08-07T01:56:51.990+0000] {_client.py:1038} INFO - HTTP Request: GET https://qwpzsjaaxuijmqodvslf.supabase.co/rest/v1/cotizaciones?select=fecha&moneda=eq.BOB&order=fecha.desc&limit=1 "HTTP/2 200 OK"
+[2025-08-07T01:56:51.995+0000] {logging_mixin.py:188} INFO - FECHA DESDE: data=[{'fecha': '2025-08-06'}] count=None MONEDA BOB
+[2025-08-07T01:56:51.996+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-07T01:56:52.020+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Ejercicio2, task_id=cargaincremental, execution_date=20250807T015134, start_date=20250807T015646, end_date=20250807T015652
+[2025-08-07T01:56:52.121+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-07T01:56:52.185+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

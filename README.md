@@ -114,14 +114,6 @@ Cada uno de estos contiene:
 - Automatización (Airflow DAG)
 ---
 
-## 🖼️ Diagrama General del Proyecto
-
-![Arquitectura General](docs/arquitectura_general.png)
-
-> Más diagramas disponibles en la carpeta `docs/`
-
----
-
 ## 📬 Contacto
 
 📧 [alexanderemir421@gmail.com](mailto:alexanderemir421@gmail.com)

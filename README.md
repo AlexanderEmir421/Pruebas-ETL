@@ -53,10 +53,9 @@ Esto pondrá en marcha:
 - Montaje automático de DAGs en `/dags`
 
 4.Entrar al panel de airflow `http://localhost:8080/`
-User: admin1
-password: admin1           #SE PUEDEN CAMBIAR EN EL .ENV
-
-![Imagen del panel](/src/)
+-User: admin1
+-password: admin1           
+-#SE PUEDEN CAMBIAR EN EL .ENV
 
 5.Activar o Ejecutar de forma manual los DAGS:
 ![Imagen del DAG activado programado](/src/AirflowDashboard.png)
@@ -71,11 +70,16 @@ password: admin1           #SE PUEDEN CAMBIAR EN EL .ENV
 ## 📂 Estructura del Proyecto
 
 ```
-.
-├── dags/                            # DAGs de Airflow (uno por ejercicio)
-│   ├── Ej1.py
-│   ├── Ej2.py
-│   └── Ej3.py
+
+├── .Airflow/                            
+│   ├── dags/                            # DAGs de Airflow (uno por ejercicio)
+│   │   ├── Ej1                         
+│   │   ├── Ej2
+│   │   └── Ej3
+│   ├── logs/                            # Crear las carpetas carpetas vacias si no las incluye el repositorio
+│   ├── config/                          # Crear las carpetas carpetas vacias si no las incluye el repositorio
+│   ├── plugins/                         # Crear las carpetas carpetas vacias si no las incluye el repositorio
+│   └── config/                          # Crear las carpetas carpetas vacias si no las incluye el repositorio
 ├── Ej1/            # Scripts y documentación del ejercicio 1
 │   ├── modulos
 │   ├── .sql        # Este archivo tiene la consulta previamente usada para crear las tablas en supabase

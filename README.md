@@ -28,15 +28,7 @@ Con destino final en una base de datos en la nube, utilizando herramientas moder
 
 ---
 
-## 🔐 Credenciales SUPABASE
-
-- **Token público** de acceso para consultas:
-TOKEN = <inserte_token>
-
-
-- **Credenciales privadas:** solicitarlas por correo a [alexanderemir421@gmail.com](mailto:alexanderemir421@gmail.com)
-
-> También podés crear tu propia base de datos en Supabase, generar un usuario y configurar el token en el archivo `.env` del repositorio,esto requiere la creacion de tablas dentro de supabase ya que no es posible crear tablas desde afuera.
+> Extra podes crear tu propia base de datos en Supabase, generar un usuario y configurar el token en el archivo `.env` del repositorio,esto requiere la creacion de tablas dentro de supabase ya que no es posible crear tablas desde afuera.
 
 ## ⚙️ Levantar el proyecto
 
@@ -47,7 +39,7 @@ git clone https://github.com/tu_usuario/data-engineer-bi.git
 cd data-engineer-bi
 ```
 
-2. Configurá tus variables en `.env` (ver `.env.example`)
+2. Configurá tus variables en `.env` (ver `.env`)
 
 3. Levantá los servicios con Docker Compose
 
@@ -60,29 +52,46 @@ Esto pondrá en marcha:
 - PostgreSQL
 - Montaje automático de DAGs en `/dags`
 
+4.Entrar al panel de airflow `http://localhost:8080/`
+User: admin1
+password: admin1           #SE PUEDEN CAMBIAR EN EL .ENV
+
+![Imagen del panel](/src/)
+
+5.Activar o Ejecutar de forma manual los DAGS:
+![Imagen del DAG activado programado](/src/AirflowDashboard.png)
+![Imagen del DAG activar manual](/src/AirflowManual.png)
+
+6.Los datos cargados van a la base destino en: `https://supabase.com/dashboard/project/qwpzsjaaxuijmqodvslf`
+
 ---
+
+
 
 ## 📂 Estructura del Proyecto
 
 ```
 .
 ├── dags/                            # DAGs de Airflow (uno por ejercicio)
-│   ├── dag_replicacion.py
-│   ├── dag_api_bcra.py
-│   └── dag_scraping.py
-├── ejercicio_1_replicacion/         # Scripts y documentación del ejercicio 1
-│   ├── etl_replicacion.py
+│   ├── Ej1.py
+│   ├── Ej2.py
+│   └── Ej3.py
+├── Ej1/            # Scripts y documentación del ejercicio 1
+│   ├── modulos
+│   ├── .sql        # Este archivo tiene la consulta previamente usada para crear las tablas en supabase
 │   └── README.md
-├── ejercicio_2_api_bcra/            # Scripts y documentación del ejercicio 2
-│   ├── etl_bcra.py
+├── Ej2/            # Scripts y documentación del ejercicio 2
+│   ├── modulos
+│   ├── .sql        # Este archivo tiene la consulta previamente usada para crear las tablas en supabase
 │   └── README.md
-├── ejercicio_3_scraping/            # Scripts y documentación del ejercicio 3
-│   ├── scraping_inmuebles.py
+├── Ej3/            # Scripts y documentación del ejercicio 3
+│   ├── modulos
+│   ├── .sql
 │   └── README.md
-├── docs/                            # Diagramas, esquemas y recursos visuales
-├── docker-compose.yml               # Define los servicios del entorno
-├── requirements.txt                 # Librerías requeridas
-└── README.md                        # Documentación general (este archivo)
+├── src/                             #Diagramas, esquemas y recursos visuales
+├── docker-compose.yml               #Define los servicios del entorno
+├── Postgres                         #Creacion de usuario y db
+└── README.md                        #Documentación general (este archivo)
 ```
 
 ---
@@ -91,16 +100,14 @@ Esto pondrá en marcha:
 
 | Ejercicio | Descripción | Documentación |
 |----------|-------------|----------------|
-| Ejercicio 1 | Replicación de base PostgreSQL a Supabase | [Ver README](./ejercicio_1_replicacion/.md) |
-| Ejercicio 2 | Ingesta incremental de cotizaciones desde API BCRA | [Ver README](./ejercicio_2_api_bcra/README.md) |
-| Ejercicio 3 | Scraping de propiedades en Posadas (Misiones) | [Ver README](./ejercicio_3_scraping/README.md) |
+| Ejercicio 1 | Replicación de base PostgreSQL a Supabase | [Ver README](./Ej1/01-Ej1.md) |
+| Ejercicio 2 | Ingesta incremental de cotizaciones desde API BCRA | [Ver README](./Ej2/01-Ej2.md) |
+| Ejercicio 3 | Scraping de propiedades en Posadas (Misiones) | [Ver README](.) |
 
 Cada uno de estos contiene:
 - Código ETL modular
 - Explicación técnica del proceso
 - Automatización (Airflow DAG)
-- Resultados y/o screenshots
-
 ---
 
 ## 🖼️ Diagrama General del Proyecto

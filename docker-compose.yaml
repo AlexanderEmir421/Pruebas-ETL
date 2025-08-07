@@ -9,13 +9,15 @@ x-airflow-common:
   # build: .
   environment:
     &airflow-common-env
+    PYTHONPATH: /opt/airflow
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
   volumes:
     - ./Airflow/dags:/opt/airflow/dags
     - ./Airflow/logs:/opt/airflow/logs
     - ./Airflow/config:/opt/airflow/config
     - ./Airflow/plugins:/opt/airflow/plugins
-    - ./Csv/:/opt/airflow/data 
+    - ./Ej1:/opt/airflow/Ej1
+    - ./Ej2:/opt/airflow/Ej2
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on

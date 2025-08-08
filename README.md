@@ -27,6 +27,9 @@ Con destino final en una base de datos en la nube, utilizando herramientas moder
 - 🛠️ Librerías: `pandas`, `requests`, `sqlalchemy`, `psycopg2`, `dotenv`, `beautifulsoup4`, `selenium`, etc.
 
 ---
+## 🔧 Acceso a Supabase
+1. User: cuent4cre3ad4p4r4pr3bas@gmail.com
+2. Pass: Pass123?.
 
 > Extra podes crear tu propia base de datos en Supabase, generar un usuario y configurar el token en el archivo `.env` del repositorio,esto requiere la creacion de tablas dentro de supabase ya que no es posible crear tablas desde afuera.
 

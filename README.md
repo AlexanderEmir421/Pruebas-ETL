@@ -38,8 +38,7 @@ Con destino final en una base de datos en la nube, utilizando herramientas moder
 1. Cloná el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/data-engineer-bi.git
-cd data-engineer-bi
+git clone https://github.com/AlexanderEmir421/Pruebas-ETL.git
 ```
 
 2. Configurá tus variables en `.env` (ver `.env`)
